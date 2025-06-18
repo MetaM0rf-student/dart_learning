@@ -11,6 +11,7 @@ void main(List<String> args) {
   var isStoreOpen = Random().nextBool();
   proccedTask3(hasMoney, isStoreOpen);
   
+  ternaryOperator();
 }
 
 void calcRectangle(double width, double length) {
@@ -42,4 +43,11 @@ void proccedTask3(bool hasMoney, bool isStoreOpen){
   }else if (!hasMoney && !isStoreOpen){
     print('You do not have money and the store is closed');
   }
+}
+
+void ternaryOperator() {
+  var temperature = Random().nextDouble()*100;
+  print('Temperature: ${temperature.toStringAsFixed(2)}');
+  var tempStatus = temperature < 10 ? 'Very cold' : temperature < 25 ? 'Cold' : 'Warm';
+  print('It is $tempStatus');
 }
