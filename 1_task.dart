@@ -1,3 +1,4 @@
+import 'dart:ffi';
 import 'dart:math';
 
 void main(List<String> args) {
@@ -7,21 +8,24 @@ void main(List<String> args) {
   calcRectangle(width, length);
 
   print('${'-' * 40} Task 2 ${'-' * 40}');
-
   proccedTask2();
 
   print('${'-' * 40} Task 3 ${'-' * 40}');
-
   var hasMoney = Random().nextBool();
   var isStoreOpen = Random().nextBool();
   proccedTask3(hasMoney, isStoreOpen);
 
   print('${'-' * 40} Task 4 ${'-' * 40}');
-
   ternaryOperator();
 
   print('${'-' * 40} Task 5 ${'-' * 40}');
+  proccedTask5();
+
+  print('${'-' * 40} Task 6 ${'-' * 40}');
+  proceedTask6();
   
+  print('${'-' * 40} Task 7 ${'-' * 40}');
+  proceedTask7();
 }
 
 void calcRectangle(double width, double length) {
@@ -60,4 +64,68 @@ void ternaryOperator() {
   print('Temperature: ${temperature.toStringAsFixed(2)}');
   var tempStatus = temperature < 10 ? 'Very cold' : temperature < 25 ? 'Cold' : 'Warm';
   print('It is $tempStatus');
+}
+
+void proccedTask5() {
+  var score = 0;
+  const correctAnswers = 17;
+  const mistakes = 3;
+  const totalQuestions = 20;
+  for (int i = 1; i <= correctAnswers; i++) {
+    score += 10;
+  }
+  for (int i = 1; i <= mistakes; i++) {
+    score -= 5;
+  }
+  score *= 2;
+  score ~/= totalQuestions;
+  print('Score: $score');
+}
+
+void proceedTask6() {
+  const examScore = 56;
+  if (examScore > 90) {
+    print('Відмінно');
+  } else if (examScore >= 75 && examScore <= 90) {
+    print('Добре');
+  } else if (examScore >= 60 && examScore < 75) {
+    print('Задовільно');
+  } else if (examScore > 60) {
+    print('Не здано');
+    if (examScore < 20) {
+      print('Повторити курс');
+    }
+  } else {
+    print('Оцінка не коректна!');
+  }
+}
+
+void proceedTask7() {
+  var dayNumber = Random().nextInt(8);
+  switch (dayNumber){
+    case 1:
+      print('Monday');
+    case 2:
+      print('Tuesday');
+    case 3:
+      print('Wednesday');
+    case 4:
+      print('Thursday');
+    case 5:
+      print('Friday');
+    case 6:
+      print('Saturday');
+      continue itsWeekend;
+    case 7:
+      print('Sunday');
+      continue itsWeekend;
+      
+    itsWeekend:
+      case 6:
+      case 7:
+      print('It is weekend!');
+
+    default:
+      print('Invalid day number');
+  }
 }
