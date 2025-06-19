@@ -28,6 +28,9 @@ void main(List<String> args) {
 
   print('${'-' * 40} Task 8 ${'-' * 40}');
   proceedTask8();
+
+  print('${'-' * 40} Task 9 ${'-' * 40}');
+  proceedTask9();
 }
 
 void calcRectangle(double width, double length) {
@@ -152,4 +155,12 @@ void proceedTask8() {
     sum += i;
   }
   print(sum);
+}
+
+void proceedTask9() {
+ var i = 10;
+ while (i>0 ) {
+    print('$i - ${i%2 == 0 ? "Парне число" : "Непарне число"}');
+    i--;
+  }
 }
