@@ -101,7 +101,7 @@ void proceedTask6() {
 }
 
 void proceedTask7() {
-  var dayNumber = Random().nextInt(8);
+  var dayNumber = Random().nextInt(7);
   switch (dayNumber){
     case 1:
       print('Monday');
