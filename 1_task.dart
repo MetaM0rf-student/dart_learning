@@ -1,4 +1,3 @@
-import 'dart:ffi';
 import 'dart:math';
 
 void main(List<String> args) {
@@ -23,9 +22,12 @@ void main(List<String> args) {
 
   print('${'-' * 40} Task 6 ${'-' * 40}');
   proceedTask6();
-  
+
   print('${'-' * 40} Task 7 ${'-' * 40}');
   proceedTask7();
+
+  print('${'-' * 40} Task 8 ${'-' * 40}');
+  proceedTask8();
 }
 
 void calcRectangle(double width, double length) {
@@ -33,7 +35,7 @@ void calcRectangle(double width, double length) {
   var perimeter = 2 * (width + length);
   print('Area: $area');
   print('Perimeter: $perimeter');
-  var maximumSquares = area~/1;
+  var maximumSquares = area ~/ 1;
 }
 
 void proccedTask2() {
@@ -47,22 +49,26 @@ void proccedTask2() {
   print('Is Number odd by 5: $isOddBy5');
 }
 
-void proccedTask3(bool hasMoney, bool isStoreOpen){
+void proccedTask3(bool hasMoney, bool isStoreOpen) {
   print('Has money: $hasMoney');
   print('Is store open: $isStoreOpen');
-  if(hasMoney && isStoreOpen){
+  if (hasMoney && isStoreOpen) {
     print('You can buy something');
-  }else if(!hasMoney || !isStoreOpen){
+  } else if (!hasMoney || !isStoreOpen) {
     print('Wait for the store to open or get some money');
-  }else if (!hasMoney && !isStoreOpen){
+  } else if (!hasMoney && !isStoreOpen) {
     print('You do not have money and the store is closed');
   }
 }
 
 void ternaryOperator() {
-  var temperature = Random().nextDouble()*50;
+  var temperature = Random().nextDouble() * 50;
   print('Temperature: ${temperature.toStringAsFixed(2)}');
-  var tempStatus = temperature < 10 ? 'Very cold' : temperature < 25 ? 'Cold' : 'Warm';
+  var tempStatus = temperature < 10
+      ? 'Very cold'
+      : temperature < 25
+      ? 'Cold'
+      : 'Warm';
   print('It is $tempStatus');
 }
 
@@ -102,7 +108,7 @@ void proceedTask6() {
 
 void proceedTask7() {
   var dayNumber = Random().nextInt(7);
-  switch (dayNumber){
+  switch (dayNumber) {
     case 1:
       print('Monday');
     case 2:
@@ -119,13 +125,31 @@ void proceedTask7() {
     case 7:
       print('Sunday');
       continue itsWeekend;
-      
+
     itsWeekend:
-      case 6:
-      case 7:
+    case 6:
+    case 7:
       print('It is weekend!');
 
     default:
       print('Invalid day number');
   }
+}
+
+void proceedTask8() {
+  for (int i = 1; i <= 10; i++) {
+    print(i);
+  }
+
+  for (int i = 1; i <= 10; i++) {
+    if (i % 2 == 0) {
+      print(i);
+    }
+  }
+
+  var sum = 0;
+  for (int i = 1; i <= 10; i++) {
+    sum += i;
+  }
+  print(sum);
 }
