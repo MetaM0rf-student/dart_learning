@@ -1,17 +1,27 @@
 import 'dart:math';
 
 void main(List<String> args) {
+  print('${'-' * 40} Task 1 ${'-' * 40}');
   const width = 18.4;
   const length = 30.9;
   calcRectangle(width, length);
 
+  print('${'-' * 40} Task 2 ${'-' * 40}');
+
   proccedTask2();
+
+  print('${'-' * 40} Task 3 ${'-' * 40}');
 
   var hasMoney = Random().nextBool();
   var isStoreOpen = Random().nextBool();
   proccedTask3(hasMoney, isStoreOpen);
-  
+
+  print('${'-' * 40} Task 4 ${'-' * 40}');
+
   ternaryOperator();
+
+  print('${'-' * 40} Task 5 ${'-' * 40}');
+  
 }
 
 void calcRectangle(double width, double length) {
@@ -46,7 +56,7 @@ void proccedTask3(bool hasMoney, bool isStoreOpen){
 }
 
 void ternaryOperator() {
-  var temperature = Random().nextDouble()*100;
+  var temperature = Random().nextDouble()*50;
   print('Temperature: ${temperature.toStringAsFixed(2)}');
   var tempStatus = temperature < 10 ? 'Very cold' : temperature < 25 ? 'Cold' : 'Warm';
   print('It is $tempStatus');
