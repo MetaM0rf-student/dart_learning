@@ -1,5 +1,5 @@
 
-void main(List<String> args) {
+void runTask1() {
   print('${'-' * 40} Task 1 ${'-' * 40}');
   const width = 18.4;
   const length = 30.9;

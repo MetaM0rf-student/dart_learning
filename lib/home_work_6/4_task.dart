@@ -1,6 +1,6 @@
 import 'dart:math';
 
-void main(List<String> args) {
+void runTask4() {
   print('${'-' * 40} Task 4 ${'-' * 40}');
   ternaryOperator();
 }

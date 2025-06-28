@@ -1,6 +1,6 @@
 import 'dart:math';
 
-void main(List<String> args) {
+void runTask2() {
   print('${'-' * 40} Task 2 ${'-' * 40}');
   proccedTask2();
 } 

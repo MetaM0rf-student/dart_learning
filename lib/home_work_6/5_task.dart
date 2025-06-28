@@ -1,6 +1,6 @@
 
 
-void main(List<String> args) {
+void runTask5() {
   print('${'-' * 40} Task 5 ${'-' * 40}');
   proccedTask5();
 }

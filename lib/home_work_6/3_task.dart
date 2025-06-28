@@ -1,6 +1,6 @@
 import 'dart:math';
 
-void main(List<String> args) {
+void runTask3() {
   print('${'-' * 40} Task 3 ${'-' * 40}');
   var hasMoney = Random().nextBool();
   var isStoreOpen = Random().nextBool();

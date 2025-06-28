@@ -1,6 +1,6 @@
 import 'dart:math';
 
-void main(List<String> args) {
+void runTask7() {
   proceedTask7();
 } 
 
