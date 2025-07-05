@@ -7,6 +7,6 @@ void runTask3() {
 
   final nounsList = generator.randomNouns(50);
   final nounsMap = { for (var element in nounsList) element : element.length };
-  final tempNouns = {for (var element in nounsMap.entries) if(element.value%2==0) element.key : element.value};
+  final tempNouns = {for (var element in nounsMap.entries) if(element.isEven) element.key : element.value};
   print(tempNouns.keys.join(", "));
 }
