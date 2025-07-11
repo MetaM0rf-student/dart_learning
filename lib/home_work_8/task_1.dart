@@ -19,7 +19,8 @@ void runTask1() {
 
   numberList.removeWhere((element) => element == 24 || element == 45 || element == 66 || element == 88);
 
-  final sum = numberList.reduce((value, element) => element%3==0 ? value+element : value);
+  //final sum = numberList.reduce((value, element) => element%3==0 ? value+element : value);
+  final sum = numberList.fold<int>(0, (previousValue, element) => element%3==0 ? previousValue+element : previousValue);
   print(sum);
 
   final temp = <int>[];
