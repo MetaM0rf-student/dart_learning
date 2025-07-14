@@ -1,4 +1,5 @@
 import 'package:dart_learning/home_work_11/hw_futures.dart';
+import 'package:dart_learning/home_work_11/hw_streams.dart';
 import 'package:dart_learning/util.dart';
 
 runHW11() async {
@@ -28,4 +29,10 @@ runHW11() async {
 
   printTaskDivider(11,5);
   await FuturedHomeWorkRunner.delayedCountdown(5);
+
+  printTaskDivider(11,6);
+  runTask6();
+
+  printTaskDivider(11,7);
+  runTask7();
 }
